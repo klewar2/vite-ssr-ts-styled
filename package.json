@@ -4,14 +4,14 @@
     "private": false,
     "version": "1.0.0",
     "scripts": {
-        "dev": "pnpm run server",
-        "prod": "pnpm run build && pnpm run server:prod",
+        "dev": "npm run server",
+        "prod": "npm run build && npm run server:prod",
         "build": "tsc --noEmit && vite build",
         "server": "ts-node ./server/index.ts",
         "server:prod": "cross-env NODE_ENV=production ts-node ./server/index.ts",
         "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
         "lint:format": "prettier --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
-        "lint": "pnpm lint:format && pnpm lint:fix ",
+        "lint": "npm lint:format && npm lint:fix ",
         "type-check": "tsc --noEmit"
     },
     "dependencies": {
